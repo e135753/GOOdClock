@@ -229,11 +229,19 @@
                                     <action selector="ApplyButton:" destination="2M8-Y4-Yit" eventType="touchUpInside" id="pH7-ET-dBn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ver 1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dY3-93-ubP">
+                                <rect key="frame" x="20" y="45" width="102.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="color0/day1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ho2-pb-k73" firstAttribute="top" secondItem="QM8-N1-6hS" secondAttribute="top" id="1re-om-gRA"/>
+                            <constraint firstItem="dY3-93-ubP" firstAttribute="width" secondItem="gSj-ef-WMG" secondAttribute="width" multiplier="1:10" id="4O2-bD-VjZ"/>
                             <constraint firstItem="yhN-Jz-3re" firstAttribute="centerY" secondItem="Ho2-pb-k73" secondAttribute="centerY" id="Cxd-O8-g7c"/>
+                            <constraint firstItem="dY3-93-ubP" firstAttribute="centerY" secondItem="Ho2-pb-k73" secondAttribute="centerY" id="MMp-9F-Cop"/>
                             <constraint firstItem="yhN-Jz-3re" firstAttribute="trailing" secondItem="QM8-N1-6hS" secondAttribute="trailing" constant="-20" id="MXl-ek-EKC"/>
                             <constraint firstItem="1Yo-Km-nBf" firstAttribute="top" secondItem="Ho2-pb-k73" secondAttribute="bottom" id="UjK-Dn-a7U"/>
                             <constraint firstItem="Ho2-pb-k73" firstAttribute="leading" secondItem="QM8-N1-6hS" secondAttribute="leading" id="Xgf-x1-FTW"/>
@@ -242,6 +250,7 @@
                             <constraint firstItem="1Yo-Km-nBf" firstAttribute="leading" secondItem="QM8-N1-6hS" secondAttribute="leading" id="imO-pn-zAo"/>
                             <constraint firstItem="1Yo-Km-nBf" firstAttribute="bottom" secondItem="QM8-N1-6hS" secondAttribute="bottom" id="jnS-g6-icO"/>
                             <constraint firstItem="Ho2-pb-k73" firstAttribute="trailing" secondItem="QM8-N1-6hS" secondAttribute="trailing" id="trN-85-2g3"/>
+                            <constraint firstItem="dY3-93-ubP" firstAttribute="leading" secondItem="QM8-N1-6hS" secondAttribute="leading" constant="20" id="vcc-Y9-Lct"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QM8-N1-6hS"/>
                     </view>
@@ -251,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mn8-wj-2rs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-224" y="-617"/>
+            <point key="canvasLocation" x="-224.41406249999997" y="-617.1875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pT5-wn-20w">
@@ -424,6 +433,9 @@
     <resources>
         <namedColor name="color0/day1">
             <color red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color0/day1">
+            <color red="0.22352941176470589" green="0.24313725490196078" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="color0/day2">
             <color red="0.0" green="0.67843137254901964" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
