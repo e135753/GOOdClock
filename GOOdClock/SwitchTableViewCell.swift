@@ -1,11 +1,3 @@
-//
-//  SwitchTableViewCell.swift
-//  put_clock
-//
-//  Created by 瀬長顕穂 on 2017/11/28.
-//  Copyright © 2017年 table clock. All rights reserved.
-//
-
 import UIKit
 
 class SwitchTableViewCell: UITableViewCell {

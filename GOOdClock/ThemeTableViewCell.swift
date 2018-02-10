@@ -1,11 +1,3 @@
-//
-//  ThemeTableViewCell.swift
-//  put_clock
-//
-//  Created by 瀬長顕穂 on 2017/11/27.
-//  Copyright © 2017年 table clock. All rights reserved.
-//
-
 import UIKit
 
 class ThemeTableViewCell: UITableViewCell {
