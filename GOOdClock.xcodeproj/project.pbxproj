@@ -8,20 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		C6305E8B202D9D6B003B06AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6305E8A202D9D6B003B06AC /* AppDelegate.swift */; };
-		C6305E8D202D9D6B003B06AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6305E8C202D9D6B003B06AC /* ViewController.swift */; };
-		C6305E90202D9D6B003B06AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6305E8E202D9D6B003B06AC /* Main.storyboard */; };
 		C6305E92202D9D6B003B06AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6305E91202D9D6B003B06AC /* Assets.xcassets */; };
 		C6305E95202D9D6B003B06AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6305E93202D9D6B003B06AC /* LaunchScreen.storyboard */; };
+		C6A133BD202EAAA200E300A3 /* color_switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133B6202EAAA000E300A3 /* color_switch.swift */; };
+		C6A133BE202EAAA200E300A3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133B7202EAAA000E300A3 /* SettingViewController.swift */; };
+		C6A133BF202EAAA200E300A3 /* draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133B8202EAAA100E300A3 /* draw.swift */; };
+		C6A133C0202EAAA200E300A3 /* ThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133B9202EAAA100E300A3 /* ThemeTableViewCell.swift */; };
+		C6A133C1202EAAA200E300A3 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133BA202EAAA100E300A3 /* LeftViewController.swift */; };
+		C6A133C2202EAAA200E300A3 /* 設定管理.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133BB202EAAA200E300A3 /* 設定管理.swift */; };
+		C6A133C3202EAAA200E300A3 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133BC202EAAA200E300A3 /* SwitchTableViewCell.swift */; };
+		C6A133C9202EAADE00E300A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133C4202EAADC00E300A3 /* ViewController.swift */; };
+		C6A133CA202EAADE00E300A3 /* clockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133C5202EAADC00E300A3 /* clockViewController.swift */; };
+		C6A133CB202EAADE00E300A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A133C6202EAADD00E300A3 /* Main.storyboard */; };
+		C6A133CD202EAADE00E300A3 /* onlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133C8202EAADD00E300A3 /* onlyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C6305E87202D9D6B003B06AC /* GOOdClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOOdClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6305E8A202D9D6B003B06AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C6305E8C202D9D6B003B06AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C6305E8F202D9D6B003B06AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6305E91202D9D6B003B06AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6305E94202D9D6B003B06AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6305E96202D9D6B003B06AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6A133B6202EAAA000E300A3 /* color_switch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = color_switch.swift; sourceTree = "<group>"; };
+		C6A133B7202EAAA000E300A3 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C6A133B8202EAAA100E300A3 /* draw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = draw.swift; sourceTree = "<group>"; };
+		C6A133B9202EAAA100E300A3 /* ThemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeTableViewCell.swift; sourceTree = "<group>"; };
+		C6A133BA202EAAA100E300A3 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		C6A133BB202EAAA200E300A3 /* 設定管理.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "設定管理.swift"; sourceTree = "<group>"; };
+		C6A133BC202EAAA200E300A3 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		C6A133C4202EAADC00E300A3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6A133C5202EAADC00E300A3 /* clockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clockViewController.swift; sourceTree = "<group>"; };
+		C6A133C6202EAADD00E300A3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C6A133C8202EAADD00E300A3 /* onlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onlyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +73,17 @@
 			isa = PBXGroup;
 			children = (
 				C6305E8A202D9D6B003B06AC /* AppDelegate.swift */,
-				C6305E8C202D9D6B003B06AC /* ViewController.swift */,
-				C6305E8E202D9D6B003B06AC /* Main.storyboard */,
+				C6A133C5202EAADC00E300A3 /* clockViewController.swift */,
+				C6A133C6202EAADD00E300A3 /* Main.storyboard */,
+				C6A133C8202EAADD00E300A3 /* onlyViewController.swift */,
+				C6A133C4202EAADC00E300A3 /* ViewController.swift */,
+				C6A133B6202EAAA000E300A3 /* color_switch.swift */,
+				C6A133B8202EAAA100E300A3 /* draw.swift */,
+				C6A133BA202EAAA100E300A3 /* LeftViewController.swift */,
+				C6A133B7202EAAA000E300A3 /* SettingViewController.swift */,
+				C6A133BC202EAAA200E300A3 /* SwitchTableViewCell.swift */,
+				C6A133B9202EAAA100E300A3 /* ThemeTableViewCell.swift */,
+				C6A133BB202EAAA200E300A3 /* 設定管理.swift */,
 				C6305E91202D9D6B003B06AC /* Assets.xcassets */,
 				C6305E93202D9D6B003B06AC /* LaunchScreen.storyboard */,
 				C6305E96202D9D6B003B06AC /* Info.plist */,
@@ -125,7 +152,7 @@
 			files = (
 				C6305E95202D9D6B003B06AC /* LaunchScreen.storyboard in Resources */,
 				C6305E92202D9D6B003B06AC /* Assets.xcassets in Resources */,
-				C6305E90202D9D6B003B06AC /* Main.storyboard in Resources */,
+				C6A133CB202EAADE00E300A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,22 +163,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6305E8D202D9D6B003B06AC /* ViewController.swift in Sources */,
+				C6A133C9202EAADE00E300A3 /* ViewController.swift in Sources */,
+				C6A133BD202EAAA200E300A3 /* color_switch.swift in Sources */,
+				C6A133CD202EAADE00E300A3 /* onlyViewController.swift in Sources */,
+				C6A133BF202EAAA200E300A3 /* draw.swift in Sources */,
+				C6A133C2202EAAA200E300A3 /* 設定管理.swift in Sources */,
+				C6A133C0202EAAA200E300A3 /* ThemeTableViewCell.swift in Sources */,
+				C6A133CA202EAADE00E300A3 /* clockViewController.swift in Sources */,
+				C6A133C3202EAAA200E300A3 /* SwitchTableViewCell.swift in Sources */,
 				C6305E8B202D9D6B003B06AC /* AppDelegate.swift in Sources */,
+				C6A133C1202EAAA200E300A3 /* LeftViewController.swift in Sources */,
+				C6A133BE202EAAA200E300A3 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C6305E8E202D9D6B003B06AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C6305E8F202D9D6B003B06AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C6305E93202D9D6B003B06AC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -275,6 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6696GEY228;
 				INFOPLIST_FILE = GOOdClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = syouganabe.GOOdClock;
@@ -289,6 +318,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6696GEY228;
 				INFOPLIST_FILE = GOOdClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = syouganabe.GOOdClock;

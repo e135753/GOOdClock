@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  GOOdClock
-//
-//  Created by uuuser on 2018/02/09.
-//  Copyright © 2018年 GOOdTeam. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

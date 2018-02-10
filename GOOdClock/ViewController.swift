@@ -1,25 +1,35 @@
-//
-//  ViewController.swift
-//  GOOdClock
-//
-//  Created by uuuser on 2018/02/09.
-//  Copyright © 2018年 GOOdTeam. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: clockViewController {
+    
+    @IBOutlet weak var time_label: UILabel!
+    @IBOutlet weak var date_label: UILabel!
+    @IBOutlet weak var second_label: UILabel!
+    
+    @IBOutlet weak var Ename_label: UILabel!
+    @IBOutlet weak var Etime_label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        super.c.mainColorItem = [time_label,date_label,Ename_label]
+        super.c.subColorItem = [Etime_label,second_label]
+        super.c.bg = self.view
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @objc override func displayClock() {
+        super.displayClock()
+        if (s.設定[.日本語表示にする]?.設定値)!{
+            time_label.text = super.ampm + super.hour + "時" + super.minute + "分"
+            second_label.text = super.second + "秒"
+        }else{
+            time_label.text = super.ampm + " " + super.hour + ":" + super.minute
+            second_label.text = super.secondWithColon
+        }
+        date_label.text = super.date
+        
+        Ename_label.text = super.eTitleText
+        Etime_label.text = super.eTimeText
     }
-
-
 }
 
