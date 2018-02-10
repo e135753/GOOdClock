@@ -15,8 +15,6 @@ class clockViewController:UIViewController{
     var minute:String = ""
     var second:String = ""
     
-    var secondWithColon:String = ""
-    
     var eTitleText:String = ""
     var eTimeText:String = ""
 
@@ -98,26 +96,11 @@ class clockViewController:UIViewController{
                 print("変換できません")
             }
         }
-        // 0から始まる時刻の場合は「 H:MM:SS」形式にする
-        if hourTime.hasPrefix("0") {
-            // 最初に見つかった0だけ削除(スペース埋め)される
-            if let range = hourTime.range(of: "0") {
-                hourTime.replaceSubrange(range, with: " ")
-            }
-        }
-        
-        if (s.設定[.秒単位を表示する]?.設定値)! == false{
-            secondTime = ""
-        }
         
         hour = hourTime
         minute = minuteTime
         second = secondTime
-        if s.設定[.秒単位を表示する]?.設定値 == false{
-            secondWithColon = ""
-        }else{
-            secondWithColon = ":" + secondTime
-        }
+
         date = date_formatter.string(from: Date())
     }
 

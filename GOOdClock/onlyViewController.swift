@@ -20,6 +20,12 @@ class onlyViewController: clockViewController {
         
         hour_label.text = super.hour
         minute_label.text = ":" + super.minute
-        second_label.text = super.secondWithColon
+        second_label.text = ":" + super.second
+        
+        if s.設定[.秒単位を表示する]?.設定値 == false{
+            second_label.alpha = 0
+        }else{
+            second_label.alpha = 0.4
+        }
     }
 }
