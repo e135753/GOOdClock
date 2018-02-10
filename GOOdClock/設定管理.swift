@@ -65,9 +65,9 @@ class 設定管理{
         }
         
         テーマ=[
-            .init(.左右分割,#imageLiteral(resourceName: "二列"),"LeftViewController"),
-            .init(.スタンダード,#imageLiteral(resourceName: "スタンダード"),"ViewController"),
-            .init(.シンプル,#imageLiteral(resourceName: "シンプル"),"onlyViewController")
+            .init(.左右分割,#imageLiteral(resourceName: "twoRows"),"LeftViewController"),
+            .init(.スタンダード,#imageLiteral(resourceName: "standard"),"ViewController"),
+            .init(.シンプル,#imageLiteral(resourceName: "simple"),"onlyViewController")
         ]
         for i in テーマ{
             if i.タイトル?.rawValue == uD.string(forKey: 選択されたテーマの保存キー){

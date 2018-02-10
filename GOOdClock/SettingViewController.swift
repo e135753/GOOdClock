@@ -128,10 +128,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         case .notDetermined:
             EKEventStore().requestAccess(to: .event, completion: { (result:Bool, error:Error?) in
                 if result {
-                    print("jcvwdhsv")
                     //                    self.eventGet()
                 } else {
-                    print("ここ呼ばれてる？")
                     // 使用拒否
                 }
             })

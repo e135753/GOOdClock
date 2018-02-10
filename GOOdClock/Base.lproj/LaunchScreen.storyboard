@@ -21,12 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="lKk-WI-Iy6">
-                                <rect key="frame" x="416" y="182" width="192" height="192"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="lKk-WI-Iy6" secondAttribute="height" multiplier="1:1" id="G5o-TN-9f3"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" GOOdClock" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="wpf-l9-eOO">
                                 <rect key="frame" x="416.5" y="394" width="192" height="27.5"/>
                                 <constraints>
@@ -36,6 +30,12 @@
                                 <color key="textColor" red="0.30692309141159058" green="0.47595351934432983" blue="0.62155622243881226" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="LaunchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lKk-WI-Iy6">
+                                <rect key="frame" x="416" y="182" width="192" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lKk-WI-Iy6" secondAttribute="height" multiplier="1:1" id="G5o-TN-9f3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.76363110542297363" green="0.7954985499382019" blue="0.83709448575973511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -55,6 +55,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="1024" height="1024"/>
+        <image name="LaunchIcon" width="1024" height="1024"/>
     </resources>
 </document>
