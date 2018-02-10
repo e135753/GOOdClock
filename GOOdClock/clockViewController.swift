@@ -20,7 +20,6 @@ class clockViewController:UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        accessApplication()
 
         if s.設定[.環境光による昼夜モードの自動切り替え]?.設定値 == true{
             NotificationCenter.default.addObserver(self,
@@ -74,7 +73,7 @@ class clockViewController:UIViewController{
         // 現在時刻を取得
         var hourTime = hour_formatter.string(from: Date())
         let minuteTime = minute_formatter.string(from: Date())
-        var secondTime = second_formatter.string(from: Date())
+        let secondTime = second_formatter.string(from: Date())
         
         //24時間表示か確認
         if(s.設定[.二十四時間表示にする]?.設定値 == false){
@@ -83,7 +82,7 @@ class clockViewController:UIViewController{
             }else{
                 ampm = "AM"
             }
-            if let one_time = Int(hourTime.substring(to:hourTime.index(hourTime.startIndex, offsetBy: 2))) {
+            if Int(hourTime.substring(to:hourTime.index(hourTime.startIndex, offsetBy: 2))) != nil {
                 if(Int(hourTime.substring(to: hourTime.index(hourTime.startIndex, offsetBy: 2)))! > 12) {
                     if (s.設定[.日本語表示にする]?.設定値)!{
                         ampm = "午後"
@@ -102,27 +101,6 @@ class clockViewController:UIViewController{
         second = secondTime
 
         date = date_formatter.string(from: Date())
-    }
-
-
-    func accessApplication()
-    {
-        // カレンダー追加の権限ステータスを取得
-        let authStatus = EKEventStore.authorizationStatus(for: .event)
-
-        switch authStatus {
-        case .authorized: break
-        case .denied: break
-        case .restricted: break
-        case .notDetermined:
-            self.myEventStore.requestAccess(to: .event, completion: { (result:Bool, error:Error?) in
-                if result {
-                    //                    self.eventGet()
-                } else {
-                    // 使用拒否
-                }
-            })
-        }
     }
     
     @objc func eventGet() {

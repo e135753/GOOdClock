@@ -4,6 +4,11 @@ import EventKit
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let s = 設定管理()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        accessApplication()
+    }
+    
     //画面遷移
     @IBAction func ApplyButton(_ sender: Any) {
         if s.選択されたテーマのタイトル == .スタンダード{
@@ -109,6 +114,28 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             s.設定[a]?.設定値  = true
         }
         s.設定値を保存(変更するkey: a.rawValue, 保存する値: (s.設定[a]?.設定値)!)
+    }
+    
+    func accessApplication()
+    {
+        // カレンダー追加の権限ステータスを取得
+        let authStatus = EKEventStore.authorizationStatus(for: .event)
+        
+        switch authStatus {
+        case .authorized: break
+        case .denied: break
+        case .restricted: break
+        case .notDetermined:
+            EKEventStore().requestAccess(to: .event, completion: { (result:Bool, error:Error?) in
+                if result {
+                    print("jcvwdhsv")
+                    //                    self.eventGet()
+                } else {
+                    print("ここ呼ばれてる？")
+                    // 使用拒否
+                }
+            })
+        }
     }
     
     @IBAction func backToTop(segue: UIStoryboardSegue) {}

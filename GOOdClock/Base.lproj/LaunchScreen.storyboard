@@ -9,7 +9,6 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="tempIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lKk-WI-Iy6">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="lKk-WI-Iy6">
                                 <rect key="frame" x="416" y="182" width="192" height="192"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lKk-WI-Iy6" secondAttribute="height" multiplier="1:1" id="G5o-TN-9f3"/>
@@ -34,11 +33,11 @@
                                     <constraint firstAttribute="width" secondItem="wpf-l9-eOO" secondAttribute="height" multiplier="7:1" id="UT5-ZC-SFR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
-                                <color key="textColor" name="color0/day2"/>
+                                <color key="textColor" red="0.30692309141159058" green="0.47595351934432983" blue="0.62155622243881226" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="color0/day3"/>
+                        <color key="backgroundColor" red="0.76363110542297363" green="0.7954985499382019" blue="0.83709448575973511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lKk-WI-Iy6" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="1 :4" id="3M7-jZ-Ps2"/>
                             <constraint firstItem="lKk-WI-Iy6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-20" id="3ad-Aj-GUl"/>
@@ -56,12 +55,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tempIcon" width="341" height="341"/>
-        <namedColor name="color0/day2">
-            <color red="0.0" green="0.67843137254901964" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="color0/day3">
-            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="Image" width="1024" height="1024"/>
     </resources>
 </document>
