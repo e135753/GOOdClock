@@ -1,7 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +19,34 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="tempIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lKk-WI-Iy6">
+                                <rect key="frame" x="416" y="182" width="192" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lKk-WI-Iy6" secondAttribute="height" multiplier="1:1" id="G5o-TN-9f3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" GOOdClock" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="wpf-l9-eOO">
+                                <rect key="frame" x="416.5" y="394" width="192" height="27.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wpf-l9-eOO" secondAttribute="height" multiplier="7:1" id="UT5-ZC-SFR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <color key="textColor" name="color0/day2"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="color0/day3"/>
+                        <constraints>
+                            <constraint firstItem="lKk-WI-Iy6" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="1 :4" id="3M7-jZ-Ps2"/>
+                            <constraint firstItem="lKk-WI-Iy6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-20" id="3ad-Aj-GUl"/>
+                            <constraint firstItem="lKk-WI-Iy6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MlL-j9-ZDf"/>
+                            <constraint firstItem="wpf-l9-eOO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TQW-Md-eag"/>
+                            <constraint firstItem="wpf-l9-eOO" firstAttribute="width" secondItem="lKk-WI-Iy6" secondAttribute="width" id="f2Q-rK-i1E"/>
+                            <constraint firstItem="wpf-l9-eOO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yqf-zb-XLO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +55,13 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tempIcon" width="341" height="341"/>
+        <namedColor name="color0/day2">
+            <color red="0.0" green="0.67843137254901964" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color0/day3">
+            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
