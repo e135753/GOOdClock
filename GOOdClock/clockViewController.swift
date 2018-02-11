@@ -126,7 +126,7 @@ class clockViewController:UIViewController{
                 }
             }
         }else{
-            print("何もない")
+            eTitleText =  "しばらく予定は\nないようです"
         }
     }
     
