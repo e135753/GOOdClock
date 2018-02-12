@@ -19,20 +19,10 @@ class ViewController: clockViewController {
     
     @objc override func displayClock() {
         super.displayClock()
-        
-        // 0から始まる時刻の場合は「 H:MM:SS」形式にする
-        var zeroNasiHour:String = super.hour
-        if zeroNasiHour.hasPrefix("0") {
-            if let range = zeroNasiHour.range(of: "0") {
-                zeroNasiHour.replaceSubrange(range, with: " ")
-            }
-        }
-        
+        time_label.text = super.ampm付きhourMinute(a: Date())
         if (s.設定[.日本語表示にする]?.設定値)!{
-            time_label.text = super.ampm + zeroNasiHour + "時" + super.minute + "分"
             second_label.text = super.second + "秒"
         }else{
-            time_label.text = super.ampm + " " + zeroNasiHour + ":" + super.minute
             second_label.text = ":" + super.second
         }
         

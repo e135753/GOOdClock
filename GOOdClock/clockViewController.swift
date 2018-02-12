@@ -102,6 +102,75 @@ class clockViewController:UIViewController{
 
         date = date_formatter.string(from: Date())
     }
+    func ampm付きhourMinute(a:Date) ->String{
+        var e_ampm:String = ""
+        var e_hour:String = ""
+        var e_minute:String = ""
+        var e_hour区切り文字:String = ""
+        var e_minute区切り文字:String = ""
+        var e_day:String = ""
+        
+        let hour_formatter = DateFormatter()
+        let minute_formatter = DateFormatter()
+        
+        hour_formatter.dateFormat = "H"
+        minute_formatter.dateFormat = "mm"
+        
+        // 現在時刻を取得
+        var hourTime = hour_formatter.string(from: a)
+        let minuteTime = minute_formatter.string(from: a)
+        
+        //24時間表示か確認
+        if(s.設定[.二十四時間表示にする]?.設定値 == false){
+            if (s.設定[.日本語表示にする]?.設定値)!{
+                e_ampm = "午前 "
+            }else{
+                e_ampm = "AM "
+            }
+            if Int(hourTime.substring(to:hourTime.index(hourTime.startIndex, offsetBy: 2))) != nil {
+                if(Int(hourTime.substring(to: hourTime.index(hourTime.startIndex, offsetBy: 2)))! > 12) {
+                    if (s.設定[.日本語表示にする]?.設定値)!{
+                        e_ampm = "午後 "
+                    }else{
+                        e_ampm = "PM "
+                    }
+                    hourTime = hour_formatter.string(from: a-60*60*12)
+                }
+            } else {
+                print("変換できません")
+            }
+        }
+        e_hour = hourTime
+//      0から始まる時刻の場合は「 H:MM:SS」形式にする
+        var zeroNasiHour:String = e_hour
+        if zeroNasiHour.hasPrefix("0") {
+            if let range = zeroNasiHour.range(of: "0") {
+                zeroNasiHour.replaceSubrange(range, with: " ")
+            }
+        }
+        e_minute = minuteTime
+        
+        //区切り文字の判断
+        if (s.設定[.日本語表示にする]?.設定値)!{
+            e_hour区切り文字 = "時"
+            e_minute区切り文字 = "分"
+        }else{
+            e_hour区切り文字 = ":"
+            e_minute区切り文字 = ""
+        }
+        
+        let judgFormatter = DateFormatter()
+        judgFormatter.dateFormat = "dd"
+        //今の日付と，イベントの日付を見比べて違かったら'明日'をつける
+        if(judgFormatter.string(from: Date()) != judgFormatter.string(from: a)) {
+            if(s.設定[.日本語表示にする]?.設定値 == true){
+                e_day = "明日 "
+            }else if(s.設定[.日本語表示にする]?.設定値 == false){
+                e_day = "tomorrow "
+            }
+        }
+        return e_day +  e_ampm + e_hour + e_hour区切り文字 + e_minute + e_minute区切り文字
+    }
     
     @objc func eventGet() {
         // イベントストアのインスタンスメソッドで述語を生成.
@@ -118,10 +187,7 @@ class clockViewController:UIViewController{
             for i in events{
                 if(w==0){
                     eTitleText = i.title
-                    let DateUtils = DateFormatter()
-                    DateUtils.dateFormat = "HH:mm"
-                    let displayTime = DateUtils.string(from: i.startDate)
-                    eTimeText = displayTime
+                    eTimeText = ampm付きhourMinute(a: i.startDate)
                     w=w+1
                 }
             }

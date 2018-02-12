@@ -67,11 +67,7 @@ class LeftViewController: clockViewController,UITableViewDelegate,UITableViewDat
                                              for: indexPath)
         if !events.isEmpty {
             cell.textLabel?.text = events[indexPath.row].title
-            
-            let DateUtils = DateFormatter()
-            DateUtils.dateFormat = "HH:mm"
-            let displayTime = DateUtils.string(from: events[indexPath.row].startDate)
-            cell.detailTextLabel?.text = displayTime
+            cell.detailTextLabel?.text = super.ampm付きhourMinute(a: events[indexPath.row].startDate)
             
             let testDraw = draw(frame: CGRect(x: 0, y: 0,width: 1000, height: 1000))
             cell.addSubview(testDraw)
