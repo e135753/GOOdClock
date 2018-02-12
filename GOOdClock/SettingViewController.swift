@@ -95,7 +95,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             advancedsettingcell.textLabel?.backgroundColor = .clear
             advancedsettingcell.swtich.addTarget(self, action: #selector(checkButtonTapped), for: UIControlEvents.valueChanged)
             advancedsettingcell.swtich.setOn((s.設定[こうもく]?.設定値)!, animated: false)
-            
+            advancedsettingcell.selectionStyle = UITableViewCellSelectionStyle.none
             return advancedsettingcell
         }
     }

@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9639E8E420317BDC009D8F25 /* twitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639E8E320317BDC009D8F25 /* twitterViewController.swift */; };
+		9639E8E920317D65009D8F25 /* TwitterShareExtensionUIResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9639E8E520317D62009D8F25 /* TwitterShareExtensionUIResources.bundle */; };
+		9639E8EA20317D65009D8F25 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9639E8E620317D63009D8F25 /* TwitterKit.framework */; };
+		9639E8EB20317D65009D8F25 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9639E8E720317D64009D8F25 /* TwitterKitResources.bundle */; };
+		9639E8EC20317D65009D8F25 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9639E8E820317D64009D8F25 /* TwitterCore.framework */; };
+		9639E8F220317DB8009D8F25 /* TimelineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639E8ED20317DB7009D8F25 /* TimelineParser.swift */; };
+		9639E8F320317DB8009D8F25 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639E8EE20317DB7009D8F25 /* TweetTableViewCell.swift */; };
+		9639E8F420317DB8009D8F25 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639E8EF20317DB7009D8F25 /* Tweet.swift */; };
+		9639E8F520317DB8009D8F25 /* TWGetHomeTL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639E8F020317DB7009D8F25 /* TWGetHomeTL.swift */; };
+		9639E8F620317DB8009D8F25 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639E8F120317DB8009D8F25 /* User.swift */; };
 		C6305E8B202D9D6B003B06AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6305E8A202D9D6B003B06AC /* AppDelegate.swift */; };
 		C6305E92202D9D6B003B06AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6305E91202D9D6B003B06AC /* Assets.xcassets */; };
 		C6305E95202D9D6B003B06AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6305E93202D9D6B003B06AC /* LaunchScreen.storyboard */; };
@@ -26,6 +35,15 @@
 
 /* Begin PBXFileReference section */
 		9639E8E320317BDC009D8F25 /* twitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterViewController.swift; sourceTree = "<group>"; };
+		9639E8E520317D62009D8F25 /* TwitterShareExtensionUIResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterShareExtensionUIResources.bundle; sourceTree = "<group>"; };
+		9639E8E620317D63009D8F25 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		9639E8E720317D64009D8F25 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
+		9639E8E820317D64009D8F25 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		9639E8ED20317DB7009D8F25 /* TimelineParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineParser.swift; sourceTree = "<group>"; };
+		9639E8EE20317DB7009D8F25 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		9639E8EF20317DB7009D8F25 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		9639E8F020317DB7009D8F25 /* TWGetHomeTL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWGetHomeTL.swift; sourceTree = "<group>"; };
+		9639E8F120317DB8009D8F25 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C6305E87202D9D6B003B06AC /* GOOdClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOOdClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6305E8A202D9D6B003B06AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6305E91202D9D6B003B06AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9639E8EA20317D65009D8F25 /* TwitterKit.framework in Frameworks */,
+				9639E8EC20317D65009D8F25 /* TwitterCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +78,10 @@
 		C6305E7E202D9D6B003B06AC = {
 			isa = PBXGroup;
 			children = (
+				9639E8E820317D64009D8F25 /* TwitterCore.framework */,
+				9639E8E620317D63009D8F25 /* TwitterKit.framework */,
+				9639E8E720317D64009D8F25 /* TwitterKitResources.bundle */,
+				9639E8E520317D62009D8F25 /* TwitterShareExtensionUIResources.bundle */,
 				C6305E89202D9D6B003B06AC /* GOOdClock */,
 				C6305E88202D9D6B003B06AC /* Products */,
 			);
@@ -86,6 +110,11 @@
 				C6A133BC202EAAA200E300A3 /* SwitchTableViewCell.swift */,
 				C6A133B9202EAAA100E300A3 /* ThemeTableViewCell.swift */,
 				C6A133BB202EAAA200E300A3 /* 設定管理.swift */,
+				9639E8ED20317DB7009D8F25 /* TimelineParser.swift */,
+				9639E8EF20317DB7009D8F25 /* Tweet.swift */,
+				9639E8EE20317DB7009D8F25 /* TweetTableViewCell.swift */,
+				9639E8F020317DB7009D8F25 /* TWGetHomeTL.swift */,
+				9639E8F120317DB8009D8F25 /* User.swift */,
 				C6305E91202D9D6B003B06AC /* Assets.xcassets */,
 				C6305E93202D9D6B003B06AC /* LaunchScreen.storyboard */,
 				C6305E96202D9D6B003B06AC /* Info.plist */,
@@ -156,6 +185,8 @@
 				C6305E95202D9D6B003B06AC /* LaunchScreen.storyboard in Resources */,
 				C6305E92202D9D6B003B06AC /* Assets.xcassets in Resources */,
 				C6A133CB202EAADE00E300A3 /* Main.storyboard in Resources */,
+				9639E8E920317D65009D8F25 /* TwitterShareExtensionUIResources.bundle in Resources */,
+				9639E8EB20317D65009D8F25 /* TwitterKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,18 +197,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9639E8F520317DB8009D8F25 /* TWGetHomeTL.swift in Sources */,
 				9639E8E420317BDC009D8F25 /* twitterViewController.swift in Sources */,
 				C6A133C9202EAADE00E300A3 /* ViewController.swift in Sources */,
 				C6A133BD202EAAA200E300A3 /* color_switch.swift in Sources */,
 				C6A133CD202EAADE00E300A3 /* onlyViewController.swift in Sources */,
 				C6A133BF202EAAA200E300A3 /* draw.swift in Sources */,
 				C6A133C2202EAAA200E300A3 /* 設定管理.swift in Sources */,
+				9639E8F620317DB8009D8F25 /* User.swift in Sources */,
+				9639E8F420317DB8009D8F25 /* Tweet.swift in Sources */,
 				C6A133C0202EAAA200E300A3 /* ThemeTableViewCell.swift in Sources */,
 				C6A133CA202EAADE00E300A3 /* clockViewController.swift in Sources */,
 				C6A133C3202EAAA200E300A3 /* SwitchTableViewCell.swift in Sources */,
 				C6305E8B202D9D6B003B06AC /* AppDelegate.swift in Sources */,
 				C6A133C1202EAAA200E300A3 /* LeftViewController.swift in Sources */,
 				C6A133BE202EAAA200E300A3 /* SettingViewController.swift in Sources */,
+				9639E8F220317DB8009D8F25 /* TimelineParser.swift in Sources */,
+				9639E8F320317DB8009D8F25 /* TweetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,10 +343,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6696GEY228;
+                DEVELOPMENT_TEAM = 6696GEY228;
 				INFOPLIST_FILE = GOOdClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = syouganabe.GOOdClock;
+                PRODUCT_BUNDLE_IDENTIFIER = syouganabe.GOOdClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,10 +358,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6696GEY228;
+                DEVELOPMENT_TEAM = 6696GEY228;
 				INFOPLIST_FILE = GOOdClock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = syouganabe.GOOdClock;
+                PRODUCT_BUNDLE_IDENTIFIER = syouganabe.GOOdClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

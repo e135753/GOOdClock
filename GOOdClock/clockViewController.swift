@@ -113,7 +113,7 @@ class clockViewController:UIViewController{
         let hour_formatter = DateFormatter()
         let minute_formatter = DateFormatter()
         
-        hour_formatter.dateFormat = "H"
+        hour_formatter.dateFormat = "HH"
         minute_formatter.dateFormat = "mm"
         
         // 現在時刻を取得

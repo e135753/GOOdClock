@@ -9,9 +9,12 @@ class twitterViewController: clockViewController,UITableViewDelegate,UITableView
     
     @IBOutlet weak var half_label: UILabel!
     var labelArray = [UILabel(), UILabel(), UILabel()]
+    var タイムライン取得:TWGetHomeTL = TWGetHomeTL()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        table.isScrollEnabled = false
+        table.allowsSelection = false
         
         //        super.c.mainColorItem = [time_label,half_label,date_label]
         //        super.c.subColorItem = []
@@ -35,46 +38,46 @@ class twitterViewController: clockViewController,UITableViewDelegate,UITableView
         if (s.設定[.カレンダーイベントを非表示にする]?.設定値)!{
             table.alpha = 0
         }
+        self.タイムライン取得.twConect(TLcount:"10")
+        DispatchQueue.main.async {
+            self.table.reloadData()
+        }
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(Table_Reload), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(Table_Reload), userInfo: nil, repeats: false)
+//        // 1秒ごとに「displayClock」を実行する
+        let timer2 = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(twitter_Reload), userInfo: nil, repeats: true)
+        timer2.fire()
     }
     @objc func Table_Reload(){
         table.reloadData()
     }
+    @objc func twitter_Reload(){
+        self.タイムライン取得.twConect(TLcount:"10")
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(Table_Reload), userInfo: nil, repeats: false)
+    }
     func tableView(_ table: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        print("テーブルの更新ですよ")
-        // イベントストアのインスタンスメソッドで述語を生成.
-        var predicate = NSPredicate()
-        predicate = myEventStore.predicateForEvents(withStart: Date(),
-                                                    end: Date()+60*60*24,
-                                                    calendars: nil)
-        // 述語にマッチする全てのイベントをフェッチ.
-        let events = myEventStore.events(matching: predicate)
-        return events.count
+        // tweetsの配列内の要素数分を指定]
+        if(self.タイムライン取得.tweets == nil){
+            return 0
+        }
+        print(self.タイムライン取得.tweets.count)
+        return self.タイムライン取得.tweets.count
     }
     
     func tableView(_ table: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("テーブルの更新ですよ2")
-        // イベントストアのインスタンスメソッドで述語を生成.
-        var predicate = NSPredicate()
-        predicate = myEventStore.predicateForEvents(withStart: Date(),
-                                                    end: Date()+60*60*24,
-                                                    calendars: nil)
-        // 述語にマッチする全てのイベントをフェッチ.
-        let events = myEventStore.events(matching: predicate)
-        // tableCell の ID で UITableViewCell のインスタンスを生成
-        let cell = table.dequeueReusableCell(withIdentifier: "eventCell",
-                                             for: indexPath)
-        if !events.isEmpty {
-            cell.textLabel?.text = events[indexPath.row].title
-            cell.detailTextLabel?.text = super.ampm付きhourMinute(a: events[indexPath.row].startDate)
-            
-            let testDraw = draw(frame: CGRect(x: 0, y: 0,width: 1000, height: 1000))
-            cell.addSubview(testDraw)
-            testDraw.isOpaque = false
-            return cell
-        }
+        let cell = table.dequeueReusableCell(withIdentifier: "TweetTableViewCell") as! TweetTableViewCell
+        
+        // TweetTableViewCellの描画内容となるtweetを渡す
+        cell.fill(tweet: (self.タイムライン取得.tweets[indexPath.row]))
+        
         return cell
+    }
+    // セルの高さ指定をする処理
+    func tableView(_ tableFunc: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // UITableViewCellの高さを自動で取得する値
+        return UITableViewAutomaticDimension
     }
 }
 
