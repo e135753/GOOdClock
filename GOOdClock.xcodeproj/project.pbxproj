@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9639E8E420317BDC009D8F25 /* twitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9639E8E320317BDC009D8F25 /* twitterViewController.swift */; };
 		C6305E8B202D9D6B003B06AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6305E8A202D9D6B003B06AC /* AppDelegate.swift */; };
 		C6305E92202D9D6B003B06AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6305E91202D9D6B003B06AC /* Assets.xcassets */; };
 		C6305E95202D9D6B003B06AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6305E93202D9D6B003B06AC /* LaunchScreen.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9639E8E320317BDC009D8F25 /* twitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterViewController.swift; sourceTree = "<group>"; };
 		C6305E87202D9D6B003B06AC /* GOOdClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOOdClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6305E8A202D9D6B003B06AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6305E91202D9D6B003B06AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				C6305E91202D9D6B003B06AC /* Assets.xcassets */,
 				C6305E93202D9D6B003B06AC /* LaunchScreen.storyboard */,
 				C6305E96202D9D6B003B06AC /* Info.plist */,
+				9639E8E320317BDC009D8F25 /* twitterViewController.swift */,
 			);
 			path = GOOdClock;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9639E8E420317BDC009D8F25 /* twitterViewController.swift in Sources */,
 				C6A133C9202EAADE00E300A3 /* ViewController.swift in Sources */,
 				C6A133BD202EAAA200E300A3 /* color_switch.swift in Sources */,
 				C6A133CD202EAADE00E300A3 /* onlyViewController.swift in Sources */,

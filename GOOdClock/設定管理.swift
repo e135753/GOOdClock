@@ -27,6 +27,7 @@ struct テーマ仕様 {
         case 左右分割
         case スタンダード
         case シンプル
+        case ツイッタータイムライン
     }
     
     let タイトル:タイトル一覧?
@@ -67,7 +68,8 @@ class 設定管理{
         テーマ=[
             .init(.左右分割,#imageLiteral(resourceName: "twoRows"),"LeftViewController"),
             .init(.スタンダード,#imageLiteral(resourceName: "standard"),"ViewController"),
-            .init(.シンプル,#imageLiteral(resourceName: "simple"),"onlyViewController")
+            .init(.シンプル,#imageLiteral(resourceName: "simple"),"onlyViewController"),
+            .init(.ツイッタータイムライン,#imageLiteral(resourceName: "twoRows"),"twitterViewController")
         ]
         for i in テーマ{
             if i.タイトル?.rawValue == uD.string(forKey: 選択されたテーマの保存キー){

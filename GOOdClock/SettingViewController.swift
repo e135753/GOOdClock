@@ -20,6 +20,9 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         }else if s.選択されたテーマのタイトル == .シンプル{
             let targetViewController = storyboard!.instantiateViewController(withIdentifier: s.選択されたテーマのタイトル.rawValue) as! onlyViewController
             self.present( targetViewController, animated: true)
+        }else if s.選択されたテーマのタイトル == .ツイッタータイムライン{
+            let targetViewController = storyboard!.instantiateViewController(withIdentifier: s.選択されたテーマのタイトル.rawValue) as! twitterViewController
+            self.present( targetViewController, animated: true)
         }
         
     }
