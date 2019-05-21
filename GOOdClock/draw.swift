@@ -1,11 +1,3 @@
-//
-//  draw.swift
-//  put_clock
-//
-//  Created by 瀬長顕穂 on 2017/11/27.
-//  Copyright © 2017年 table clock. All rights reserved.
-//
-
 import UIKit
 
 class draw: UIView {
@@ -31,13 +23,5 @@ class draw: UIView {
         //塗りつぶし
         line.fill()
     }
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }

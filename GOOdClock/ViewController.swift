@@ -12,21 +12,21 @@ class ViewController: clockViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        super.c.mainColorItem = [time_label,date_label,Ename_label]
-        super.c.subColorItem = [Etime_label,second_label]
-        super.c.bg = self.view
+        super.🎨.mainColorItem = [time_label,date_label,Ename_label]
+        super.🎨.subColorItem = [Etime_label,second_label]
+        super.🎨.bg = self.view
     }
     
     @objc override func displayClock() {
         super.displayClock()
         time_label.text = super.ampm付きhourMinute(a: Date())
-        if (s.設定[.日本語表示にする]?.設定値)!{
+        if (🎛.設定[.日本語表示にする]?.設定値)!{
             second_label.text = super.second + "秒"
         }else{
             second_label.text = ":" + super.second
         }
         
-        if s.設定[.秒単位を表示する]?.設定値 == false{
+        if 🎛.設定[.秒単位を表示する]?.設定値 == false{
             second_label.alpha = 0
         }else{
             second_label.alpha = 1

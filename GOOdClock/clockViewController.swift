@@ -5,9 +5,8 @@ import EventKit
 
 class clockViewController:UIViewController{
     let myEventStore:EKEventStore = EKEventStore()
-    let s = 設定管理()
-    let c = color_switch()
-    let 🎨 = "test"
+    let 🎛 = 設定管理()
+    let 🎨 = color_switch()
     
     var ampm:String = ""
     var date:String = ""
@@ -22,7 +21,7 @@ class clockViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if s.設定[.環境光による昼夜モードの自動切り替え]?.設定値 == true{
+        if 🎛.設定[.環境光による昼夜モードの自動切り替え]?.設定値 == true{
             NotificationCenter.default.addObserver(self,
                                                selector: #selector(screenBrightnessDidChange(_:)),
                                                name: UIScreen.brightnessDidChangeNotification,
@@ -34,8 +33,8 @@ class clockViewController:UIViewController{
         super.viewWillAppear(animated)
         eventGet()
         // 一定間隔で実行
-        if s.選択されたテーマのタイトル == .左右分割
-            || s.選択されたテーマのタイトル == .スタンダード{
+        if 🎛.選択されたテーマのタイトル == .左右分割
+            || 🎛.選択されたテーマのタイトル == .スタンダード{
             let time2 = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(eventGet), userInfo: nil, repeats: true)
             time2.fire()
         }
@@ -43,14 +42,14 @@ class clockViewController:UIViewController{
         let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(displayClock), userInfo: nil, repeats: true)
         timer.fire()    // 無くても動くけどこれが無いと初回の実行がラグる
 
-        if (s.設定[.夜テーマにする]?.設定値)!{
-            c.dayNightChange("night")
+        if (🎛.設定[.夜テーマにする]?.設定値)!{
+            🎨.dayNightChange("night")
         }else{
-            c.dayNightChange("day")
+            🎨.dayNightChange("day")
         }
 
-        if (s.設定[.緑ベースの配色にする]?.設定値)!{
-            c.colorThemeChange(colorTheme: "color1")
+        if (🎛.設定[.緑ベースの配色にする]?.設定値)!{
+            🎨.colorThemeChange(colorTheme: "color1")
         }
     }
     
@@ -64,7 +63,7 @@ class clockViewController:UIViewController{
         minute_formatter.dateFormat = "mm"
         second_formatter.dateFormat = "ss"
         
-        if (s.設定[.日本語表示にする]?.設定値)!{
+        if (🎛.設定[.日本語表示にする]?.設定値)!{
             date_formatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale?
             date_formatter.dateFormat = "yyyy年MM月dd日 E曜日"
         }else{
@@ -77,15 +76,15 @@ class clockViewController:UIViewController{
         let secondTime = second_formatter.string(from: Date())
         
         //24時間表示か確認
-        if(s.設定[.二十四時間表示にする]?.設定値 == false){
-            if (s.設定[.日本語表示にする]?.設定値)!{
+        if(🎛.設定[.二十四時間表示にする]?.設定値 == false){
+            if (🎛.設定[.日本語表示にする]?.設定値)!{
                 ampm = "午前"
             }else{
                 ampm = "AM"
             }
             if Int(hourTime.substring(to:hourTime.index(hourTime.startIndex, offsetBy: 2))) != nil {
                 if(Int(hourTime.substring(to: hourTime.index(hourTime.startIndex, offsetBy: 2)))! > 12) {
-                    if (s.設定[.日本語表示にする]?.設定値)!{
+                    if (🎛.設定[.日本語表示にする]?.設定値)!{
                         ampm = "午後"
                     }else{
                         ampm = "PM"
@@ -122,15 +121,15 @@ class clockViewController:UIViewController{
         let minuteTime = minute_formatter.string(from: a)
         
         //24時間表示か確認
-        if(s.設定[.二十四時間表示にする]?.設定値 == false){
-            if (s.設定[.日本語表示にする]?.設定値)!{
+        if(🎛.設定[.二十四時間表示にする]?.設定値 == false){
+            if (🎛.設定[.日本語表示にする]?.設定値)!{
                 e_ampm = "午前 "
             }else{
                 e_ampm = "AM "
             }
             if Int(hourTime.substring(to:hourTime.index(hourTime.startIndex, offsetBy: 2))) != nil {
                 if(Int(hourTime.substring(to: hourTime.index(hourTime.startIndex, offsetBy: 2)))! > 12) {
-                    if (s.設定[.日本語表示にする]?.設定値)!{
+                    if (🎛.設定[.日本語表示にする]?.設定値)!{
                         e_ampm = "午後 "
                     }else{
                         e_ampm = "PM "
@@ -152,7 +151,7 @@ class clockViewController:UIViewController{
         e_minute = minuteTime
         
         //区切り文字の判断
-        if (s.設定[.日本語表示にする]?.設定値)!{
+        if (🎛.設定[.日本語表示にする]?.設定値)!{
             e_hour区切り文字 = "時"
             e_minute区切り文字 = "分"
         }else{
@@ -164,9 +163,9 @@ class clockViewController:UIViewController{
         judgFormatter.dateFormat = "dd"
         //今の日付と，イベントの日付を見比べて違かったら'明日'をつける
         if(judgFormatter.string(from: Date()) != judgFormatter.string(from: a)) {
-            if(s.設定[.日本語表示にする]?.設定値 == true){
+            if(🎛.設定[.日本語表示にする]?.設定値 == true){
                 e_day = "明日 "
-            }else if(s.設定[.日本語表示にする]?.設定値 == false){
+            }else if(🎛.設定[.日本語表示にする]?.設定値 == false){
                 e_day = "tomorrow "
             }
         }
@@ -199,11 +198,11 @@ class clockViewController:UIViewController{
     
     @objc func screenBrightnessDidChange(_ notification: Notification) {
         if UIScreen.main.brightness < 0.5{//実際には0.2ぐらいが良さそう
-            c.昼か夜か = "night"
+            🎨.昼か夜か = "night"
         }else{
-            c.昼か夜か = "day"
+            🎨.昼か夜か = "day"
         }
-        c.colorReload()
+        🎨.colorReload()
         print("明るさ変わった->",UIScreen.main.brightness)
     }
     

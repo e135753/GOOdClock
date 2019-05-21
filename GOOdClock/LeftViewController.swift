@@ -27,12 +27,12 @@ class LeftViewController: clockViewController,UITableViewDelegate,UITableViewDat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if (s.設定[.二十四時間表示にする]?.設定値)!{
+        if (🎛.設定[.二十四時間表示にする]?.設定値)!{
             half_label.alpha = 0
         }else{
             half_label.alpha = 1
         }
-        if (s.設定[.カレンダーイベントを非表示にする]?.設定値)!{
+        if (🎛.設定[.カレンダーイベントを非表示にする]?.設定値)!{
             table.alpha = 0
         }
     }
