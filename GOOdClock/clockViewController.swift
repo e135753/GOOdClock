@@ -7,6 +7,7 @@ class clockViewController:UIViewController{
     let myEventStore:EKEventStore = EKEventStore()
     let s = 設定管理()
     let c = color_switch()
+    let 🎨 = "test"
     
     var ampm:String = ""
     var date:String = ""
@@ -24,7 +25,7 @@ class clockViewController:UIViewController{
         if s.設定[.環境光による昼夜モードの自動切り替え]?.設定値 == true{
             NotificationCenter.default.addObserver(self,
                                                selector: #selector(screenBrightnessDidChange(_:)),
-                                               name: NSNotification.Name.UIScreenBrightnessDidChange,
+                                               name: UIScreen.brightnessDidChangeNotification,
                                                object: nil)
         }
     }
@@ -64,7 +65,7 @@ class clockViewController:UIViewController{
         second_formatter.dateFormat = "ss"
         
         if (s.設定[.日本語表示にする]?.設定値)!{
-            date_formatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale! as Locale!
+            date_formatter.locale = NSLocale(localeIdentifier: "ja_JP") as Locale?
             date_formatter.dateFormat = "yyyy年MM月dd日 E曜日"
         }else{
             date_formatter.dateFormat = "yyyy/MM/dd EEE"

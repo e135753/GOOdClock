@@ -33,7 +33,7 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "iphone.png",
+      "filename" : "GOOdClockIcon-3.png",
       "scale" : "2x"
     },
     {
@@ -79,19 +79,19 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "ipad.png",
+      "filename" : "GOOdClockIcon-2.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "Icon-83.5@2x.png",
+      "filename" : "GOOdClockIcon-1.png",
       "scale" : "2x"
     },
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "iTunesArtwork@2x.png",
+      "filename" : "GOOdClockIcon.png",
       "scale" : "1x"
     }
   ],

@@ -54,7 +54,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         if(indexPath.section == 0){
             s.選択されたテーマのタイトル = s.テーマ[indexPath.row].タイトル!
             s.テーマをこれに変更し保存する(s.テーマ[indexPath.row].タイトル!)
-            self.SettingTableView.reloadSections([indexPath.section], with: UITableViewRowAnimation.fade)
+            self.SettingTableView.reloadSections([indexPath.section], with: UITableView.RowAnimation.fade)
         }
         return
     }
@@ -90,7 +90,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             advancedsettingcell = SettingTableView.dequeueReusableCell(withIdentifier: "AdvancedSettingCell", for: indexPath) as! SwitchTableViewCell
             advancedsettingcell.textLabel?.text = こうもく.rawValue
             advancedsettingcell.textLabel?.backgroundColor = .clear
-            advancedsettingcell.swtich.addTarget(self, action: #selector(checkButtonTapped), for: UIControlEvents.valueChanged)
+            advancedsettingcell.swtich.addTarget(self, action: #selector(checkButtonTapped), for: UIControl.Event.valueChanged)
             advancedsettingcell.swtich.setOn((s.設定[こうもく]?.設定値)!, animated: false)
             
             return advancedsettingcell
@@ -106,8 +106,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
      */
     @objc func checkButtonTapped(sender: UISwitch, event: UIEvent) {
         let hoge = sender.superview?.superview as! SwitchTableViewCell
-        let touchIndex = SettingTableView.indexPath(for: hoge)?.row as!Int
-        let a:設定仕様.タイトル一覧 = s.表示する設定項目の順番[touchIndex]
+        let touchIndex = SettingTableView.indexPath(for: hoge)?.row
+        let a:設定仕様.タイトル一覧 = s.表示する設定項目の順番[touchIndex!]
         if s.設定[a]?.設定値 == true {
             s.設定[a]?.設定値 = false
         }else{
@@ -133,6 +133,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
                     // 使用拒否
                 }
             })
+        @unknown default:
+            fatalError()
         }
     }
     
