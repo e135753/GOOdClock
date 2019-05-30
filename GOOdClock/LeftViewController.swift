@@ -13,9 +13,9 @@ class LeftViewController: clockViewController,UITableViewDelegate,UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        super.c.mainColorItem = [time_label,half_label,date_label]
-//        super.c.subColorItem = []
-//        super.c.bg = self.view
+        super.🎨.mainColorItem = [time_label,half_label,date_label]
+        super.🎨.subColorItem = []
+        super.🎨.bg = self.view
     }
 
     @objc override func displayClock() {

@@ -6,7 +6,7 @@ import EventKit
 class clockViewController:UIViewController{
     let myEventStore:EKEventStore = EKEventStore()
     let 🎛 = 設定管理()
-    let 🎨 = color_switch()
+    let 🎨 = 🎨👩‍🎨()
     
     var ampm:String = ""
     var date:String = ""

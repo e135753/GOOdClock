@@ -21,6 +21,7 @@
 		C6A133CA202EAADE00E300A3 /* clockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133C5202EAADC00E300A3 /* clockViewController.swift */; };
 		C6A133CB202EAADE00E300A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A133C6202EAADD00E300A3 /* Main.storyboard */; };
 		C6A133CD202EAADE00E300A3 /* onlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A133C8202EAADD00E300A3 /* onlyViewController.swift */; };
+		CD3D7DBB2293B0720010978A /* 🎨👩‍🎨.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D7DBA2293B0720010978A /* 🎨👩‍🎨.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C6A133C5202EAADC00E300A3 /* clockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clockViewController.swift; sourceTree = "<group>"; };
 		C6A133C6202EAADD00E300A3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C6A133C8202EAADD00E300A3 /* onlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onlyViewController.swift; sourceTree = "<group>"; };
+		CD3D7DBA2293B0720010978A /* 🎨👩‍🎨.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🎨👩‍🎨.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				C6A133C8202EAADD00E300A3 /* onlyViewController.swift */,
 				C6A133C4202EAADC00E300A3 /* ViewController.swift */,
 				C6A133B6202EAAA000E300A3 /* color_switch.swift */,
+				CD3D7DBA2293B0720010978A /* 🎨👩‍🎨.swift */,
 				C6A133B8202EAAA100E300A3 /* draw.swift */,
 				C6A133BA202EAAA100E300A3 /* LeftViewController.swift */,
 				C6A133B7202EAAA000E300A3 /* SettingViewController.swift */,
@@ -167,6 +170,7 @@
 				C6A133C9202EAADE00E300A3 /* ViewController.swift in Sources */,
 				C6A133BD202EAAA200E300A3 /* color_switch.swift in Sources */,
 				C6A133CD202EAADE00E300A3 /* onlyViewController.swift in Sources */,
+				CD3D7DBB2293B0720010978A /* 🎨👩‍🎨.swift in Sources */,
 				C6A133BF202EAAA200E300A3 /* draw.swift in Sources */,
 				C6A133C2202EAAA200E300A3 /* 設定管理.swift in Sources */,
 				C6A133C0202EAAA200E300A3 /* ThemeTableViewCell.swift in Sources */,

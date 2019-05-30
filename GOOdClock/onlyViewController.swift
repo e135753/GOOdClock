@@ -10,10 +10,14 @@ class onlyViewController: clockViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        super.c.mainColorItem = [hour_label,minute_label,second_label]
-//        super.c.bg = self.view
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        super.🎨.mainColorItem = [hour_label,minute_label,second_label]
+        super.🎨.bg = self.view
+    }
+    
 
     @objc override func displayClock() {
         super.displayClock()
